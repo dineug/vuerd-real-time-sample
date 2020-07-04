@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vuerd-real-time-sample</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <erd-editor automatic-layout></erd-editor>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuerd/dist/vuerd.min.js"></script>
+    <script>
+      const erd = document.querySelector("erd-editor");
+      const socket = io();
+
+      socket.on("vuerd.init", (value) => {
+        erd.initLoadJson(value);
+      });
+
+      socket.on("vuerd.share", (commands) => {
+        erd.sharePush(commands);
+      });
+
+      socket.emit("vuerd.init");
+
+      erd.sharePull((commands) => {
+        socket.emit("vuerd.share", commands);
+      });
+    </script>
+  </body>
+</html>

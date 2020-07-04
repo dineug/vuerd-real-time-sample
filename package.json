@@ -1,0 +1,17 @@
+{
+  "name": "vuerd-real-time-sample",
+  "version": "1.0.0",
+  "description": "Real-time simultaneous editing sample",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "dineug <dineug2@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "vuerd": "^1.2.3"
+  }
+}
