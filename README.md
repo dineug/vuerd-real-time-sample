@@ -21,3 +21,12 @@ interface ERDEngine {
   sharePush(commands: Array<Command<CommandType>>): void;
 }
 ```
+
+| Name         | Type     | Describe                    |
+| ------------ | -------- | --------------------------- |
+| value        | String   | editor data                 |
+| initLoadJson | Function | Do not record and save undo |
+| clear        | Function | editor data clear           |
+| setUser      | Function | share user name             |
+| sharePull    | Function | share pull                  |
+| sharePush    | Function | share push                  |
