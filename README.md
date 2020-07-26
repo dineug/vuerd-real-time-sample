@@ -30,3 +30,7 @@ interface ERDEngine {
 | setUser      | Function | share user name             |
 | sharePull    | Function | share pull                  |
 | sharePush    | Function | share push                  |
+
+## Flow
+
+![vuerd](https://github.com/vuerd/vuerd/blob/master/img/vuerd_real-time-simultaneous-editing_flow.png?raw=true)
