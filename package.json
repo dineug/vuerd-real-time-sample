@@ -12,6 +12,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^2.3.0",
-    "vuerd": "^1.2.3"
+    "vuerd": "^1.3.1"
   }
 }

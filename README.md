@@ -15,21 +15,25 @@ $ npm start
 interface ERDEngine {
   value: string;
   initLoadJson(json: string): void;
+  loadSQLDDL(sql: string): void;
   clear(): void;
   setUser(user: User): void;
   sharePull(effect: (commands: Array<Command<CommandType>>) => void): void;
   sharePush(commands: Array<Command<CommandType>>): void;
+  getSQLDDL(database?: Database): string;
 }
 ```
 
-| Name         | Type     | Describe                    |
-| ------------ | -------- | --------------------------- |
-| value        | String   | editor data                 |
-| initLoadJson | Function | Do not record and save undo |
-| clear        | Function | editor data clear           |
-| setUser      | Function | share user name             |
-| sharePull    | Function | share pull                  |
-| sharePush    | Function | share push                  |
+| Name         | Type     | Describe                                                   |
+| ------------ | -------- | ---------------------------------------------------------- |
+| value        | String   | editor data                                                |
+| initLoadJson | Function | Do not record and save undo                                |
+| loadSQLDDL   | Function | import SQL DDL                                             |
+| clear        | Function | editor data clear                                          |
+| setUser      | Function | share user name                                            |
+| sharePull    | Function | share pull                                                 |
+| sharePush    | Function | share push                                                 |
+| getSQLDDL    | Function | SQL DDL(MariaDB, MSSQL, MySQL, Oracle, PostgreSQL, SQLite) |
 
 ## Flow
 
